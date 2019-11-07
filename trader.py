@@ -23,11 +23,11 @@ class Trader:
                 strategy = self.strategy(rsp[::-1])
                 signal = strategy.run()
                 if signal == 1:
-                    order = self.client.Order.Order_new(symbol=self.symbol, orderQty=self.lot, price=12345.0).result()
-                    print(order, 'orden buy')
+                    order = self.client.Order.Order_new(symbol=self.symbol, orderQty=self.lot, ordType="Market").result()
+                    print(order, 'order buy')
                 elif signal == -1:
-                    order = self.client.Order.Order_new(symbol=self.symbol, orderQty=-self.lot, price=12345.0).result()
-                    print(order, 'orden sell')
+                    order = self.client.Order.Order_new(symbol=self.symbol, orderQty=-self.lot, ordType="Market").result()
+                    print(order, 'order sell')
                 print(datetime.utcnow().replace(microsecond=0), f'signal: {signal} esperando o proximo signal')
                 time.sleep(self.loop)
             except Exception as e:

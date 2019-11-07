@@ -1,6 +1,6 @@
 {
-    "api_key": "2-tfEKQrF0p3FOyG8m4OVYQq",
-    "api_secret": "3l012Q1N55AhdlI-qF-2yYa5Yaw0E9my3HXFjQovbQt8BnkC",
+    "api_key": "",
+    "api_secret": "",
     "test": true,
     "symbol": "XBTUSD",
     "strategy": "Smacrossover",
