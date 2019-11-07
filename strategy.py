@@ -1,4 +1,8 @@
 from indicators import *
+import json
+
+cfg = json.load(open('cfg.json', 'r'))
+
 
 class Strategy:
     def __init__(self, data):
@@ -8,8 +12,8 @@ class Strategy:
 class Smacrossover(Strategy):
     def run(self):
         data = self.data['close']
-        sma1 = sma(data, 9)
-        sma2 = sma(data, 21)
+        sma1 = sma(data, cfg['sma'][0])
+        sma2 = sma(data, cfg['sma'][1])
 
         if crossover(sma1, sma2):
             return 1

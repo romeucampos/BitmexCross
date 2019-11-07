@@ -7,7 +7,7 @@ from datetime import datetime
 
 
 class Trader:   
-    def __init__(self, symbol='XBTUSD', client='', strategy='', lot=10, loop=10):
+    def __init__(self, symbol, client, strategy, lot, loop):
         self.symbol = symbol
         self.client = client
         self.strategy = strategy
@@ -28,7 +28,7 @@ class Trader:
                 elif signal == -1:
                     order = self.client.Order.Order_new(symbol=self.symbol, orderQty=-self.lot, price=12345.0).result()
                     print(order, 'orden sell')
+                print(datetime.utcnow().replace(microsecond=0), f'signal: {signal} esperando o proximo signal')
                 time.sleep(self.loop)
-                print(datetime.utcnow().replace(microsecond=0), f'signal: {signal} esperando o proximo cruzamento sma')
             except Exception as e:
                 print(e)
