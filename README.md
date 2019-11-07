@@ -1,0 +1,2 @@
+# BitmexCross
+simple bot bitmex
