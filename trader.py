@@ -5,7 +5,6 @@ import time
 from datetime import datetime
 
 
-
 class Trader:   
     def __init__(self, symbol, client, strategy, lot, loop):
         self.symbol = symbol
