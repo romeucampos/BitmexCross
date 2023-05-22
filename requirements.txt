@@ -1,7 +1,7 @@
-﻿backtesting==0.1.2
+backtesting==0.1.2
 bitmex==0.2.2
 bravado==10.4.1
 bravado-core==5.13.2
 pandas==0.24.2
 pandas-datareader==0.7.0
-requests==2.20.0
+requests==2.31.0
